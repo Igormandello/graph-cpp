@@ -21,6 +21,8 @@ class Graph {
 
   public:
     Graph(GraphType);
+    template <class U>
+    friend ostream& operator<<(ostream&, Graph<U>);
 };
 
 #include "Graph.inl"
