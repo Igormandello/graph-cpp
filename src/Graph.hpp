@@ -2,6 +2,8 @@
 #define GRAPH_INCLUDED
 
 #include <iostream>
+#include <map>
+#include <string>
 
 using namespace std;
 
@@ -14,6 +16,8 @@ template <class T>
 class Graph {
   private:
     GraphType type;
+    map<T, int> verticesIndexes;
+    int actualIndex;
 
   public:
     Graph(GraphType);
