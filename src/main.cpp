@@ -4,7 +4,10 @@
 using namespace std;
 
 int main() {
-  Graph<int> g(DIRECTED);
+  Graph<char> g(DIRECTED);
+  cout << g;
+
+  g.addVertex('A');
   cout << g;
 
   return 0;
