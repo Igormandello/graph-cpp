@@ -22,6 +22,7 @@ class Graph {
   public:
     Graph(GraphType);
     void addVertex(T);
+    void removeVertex(T);
     template <class U>
     friend ostream& operator<<(ostream&, Graph<U>);
 };
