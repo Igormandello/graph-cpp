@@ -1,0 +1,3 @@
+[submodule "sparse-matrix-cpp"]
+	path = sparse-matrix-cpp
+	url = https://github.com/Igormandello/sparse-matrix-cpp
