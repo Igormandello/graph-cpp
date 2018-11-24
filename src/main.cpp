@@ -4,14 +4,18 @@
 using namespace std;
 
 int main() {
-  Graph<char> g(DIRECTED);
+  Graph<char> g(NON_DIRECTED);
   cout << g << endl << endl;
 
   g.addVertex('A');
   g.addVertex('B');
+  g.addVertex('C');
   cout << g << endl;
 
-  g.removeVertex('A');
+  g.removeVertex('C');
+  cout << g << endl;
+
+  g.addEdge('A', 'B', 10);
   cout << g;
 
   return 0;

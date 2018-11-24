@@ -4,6 +4,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include "../sparse-matrix-cpp/sparse-matrix/SparseMatrix.hpp"
 
 using namespace std;
 
@@ -17,12 +18,14 @@ class Graph {
   private:
     GraphType type;
     map<T, int> verticesIndexes;
+    SparseMatrix<int> edges;
     int actualIndex;
 
   public:
     Graph(GraphType);
     void addVertex(T);
     void removeVertex(T);
+    void addEdge(T, T, int);
     template <class U>
     friend ostream& operator<<(ostream&, Graph<U>);
 };
