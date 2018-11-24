@@ -4,7 +4,7 @@
 #include <iostream>
 #include <map>
 #include <string>
-#include "../sparse-matrix-cpp/sparse-matrix/SparseMatrix.hpp"
+#include "../sparse-matrix-cpp/src/SparseMatrix.hpp"
 
 using namespace std;
 

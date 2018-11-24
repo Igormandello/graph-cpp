@@ -1,5 +1,5 @@
 template <class T>
-Graph<T>::Graph(GraphType t) {
+Graph<T>::Graph(GraphType t) : edges(-1) {
   this->type = t;
   this->actualIndex = 1;
 }
