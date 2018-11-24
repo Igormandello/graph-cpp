@@ -26,6 +26,7 @@ class Graph {
     void addVertex(T);
     void removeVertex(T);
     void addEdge(T, T, int);
+    void removeEdge(T, T);
     template <class U>
     friend ostream& operator<<(ostream&, Graph<U>);
 };

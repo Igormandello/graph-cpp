@@ -29,6 +29,19 @@ void Graph<T>::addEdge(T origin, T destination, int weigth) {
 }
 
 template <class T>
+void Graph<T>::removeEdge(T origin, T destination) {
+  auto originIt = this->verticesIndexes.find(origin);
+  auto destIt = this->verticesIndexes.find(destination);
+
+  if (originIt != this->verticesIndexes.end() && destIt != this->verticesIndexes.end()) {
+    this->edges.remove(originIt->second, destIt->second);
+
+    if (this->type == NON_DIRECTED)
+      this->edges.remove(destIt->second, originIt->second);
+  }
+}
+
+template <class T>
 ostream& operator<<(ostream& os, Graph<T> g) {
   os << "Vertices: {" << endl;
   for(auto it = g.verticesIndexes.begin(); it != g.verticesIndexes.end(); ++it)
